@@ -31,11 +31,11 @@ export class TelegramService {
     return this.telegramRepository.save(record);
   }
 
-  async message(body: TelegramMessage) {
+  async message(body: TelegramMessage): Promise<void[]> {
     const apis = await this.telegramRepository.find();
 
     return Promise.all(
-      apis.map(({ botApiKey, userIds }) =>
+      apis.map(({ botApiKey, userIds }) => {
         userIds.split(',').map((userId) =>
           this.httpService.axiosRef.post(
             `https://api.telegram.org/bot${botApiKey}/sendMessage`,
@@ -49,8 +49,8 @@ export class TelegramService {
 Коментар: ${body.comment}`,
             },
           ),
-        ),
-      ),
+        );
+      }),
     );
   }
 }
