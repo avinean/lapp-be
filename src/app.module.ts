@@ -6,24 +6,10 @@ import { AuthGuard } from './guards/auth.guard';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { JwtService } from '@nestjs/jwt';
-import { CategoryModule } from './category/category.module';
 import { AuthModule } from './auth/auth.module';
-import { CategoryEntity } from './category/category.entity';
-import { ProductModule } from './product/product.module';
-import { ProductEntity } from './product/product.entity';
 import { UtilModule } from './util/util.module';
-import { BrandEntity } from './brand/brand.entity';
-import { BrandModule } from './brand/brand.module';
-import { ColorModule } from './color/color.module';
-import { ColorEntity } from './color/color.entity';
-import { ParameterModule } from './parameter/parameter.module';
-import { ParameterEntity } from './parameter/parameter.entity';
-import { ApplicationModule } from './application/application.module';
-import { ApplicationEntity } from './application/application.entity';
 import { ContactModule } from './contact/contact.module';
 import { ContactEntity } from './contact/contact.entity';
-import { PriceModule } from './price/price.module';
-import { PriceEntity } from './price/price.entity';
 import { GalleryModule } from './gallery/gallery.module';
 import { GalleryEntity } from './gallery/gallery.entity';
 import { TelegramModule } from './telegram/telegram.module';
@@ -50,14 +36,7 @@ import { MailModule } from './mail/mail.module';
       logging: ['error'],
       // logger: 'debug',
       entities: [
-        CategoryEntity,
-        ProductEntity,
-        BrandEntity,
-        ColorEntity,
-        ParameterEntity,
-        ApplicationEntity,
         ContactEntity,
-        PriceEntity,
         GalleryEntity,
         TelegramEntity,
         CmsEntity,
@@ -73,15 +52,8 @@ import { MailModule } from './mail/mail.module';
       exclude: ['/api/(.*)'],
     }),
     AuthModule,
-    CategoryModule,
-    ProductModule,
     UtilModule,
-    BrandModule,
-    ColorModule,
-    ParameterModule,
-    ApplicationModule,
     ContactModule,
-    PriceModule,
     GalleryModule,
     TelegramModule,
     CmsModule,

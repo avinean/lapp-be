@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { GalleryEntity } from './gallery.entity';
 import { DeepPartial, FindOptionsWhere, Repository } from 'typeorm';
-import { ProductEntity } from 'src/product/product.entity';
 import { slugify } from 'src/utils';
 
 @Injectable()
@@ -33,8 +32,8 @@ export class GalleryService {
   }
 
   async update(
-    where: FindOptionsWhere<ProductEntity>,
-    params: DeepPartial<ProductEntity>,
+    where: FindOptionsWhere<GalleryEntity>,
+    params: DeepPartial<GalleryEntity>,
   ) {
     const galleryItem = await this.galleryRepository.findOne({ where });
     galleryItem.slug = `${slugify(galleryItem.title)}-${galleryItem.id}`;

@@ -1,4 +1,3 @@
-import { ProductEntity } from 'src/product/product.entity';
 import {
   Column,
   CreateDateColumn,
@@ -34,8 +33,4 @@ export class GalleryEntity {
 
   @UpdateDateColumn()
   updatedAt: Date;
-
-  @ManyToMany(() => ProductEntity)
-  @JoinTable()
-  products: ProductEntity[];
 }

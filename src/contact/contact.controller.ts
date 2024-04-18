@@ -2,8 +2,8 @@ import { Body, Controller, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { ContactService } from './contact.service';
 import { Public } from 'src/decorators/public.decorator';
 import { DeepPartial, In } from 'typeorm';
-import { ProductEntity } from 'src/product/product.entity';
 import { VisibilityStatus } from 'src/types/enums';
+import { ContactEntity } from './contact.entity';
 
 @Controller('contact')
 export class ContactController {
@@ -19,12 +19,12 @@ export class ContactController {
   }
 
   @Post()
-  create(@Body() dto: DeepPartial<ProductEntity>) {
+  create(@Body() dto: DeepPartial<ContactEntity>) {
     return this.contactService.create(dto);
   }
 
   @Put(':id')
-  update(@Param('id') id: number, @Body() dto: DeepPartial<ProductEntity>) {
+  update(@Param('id') id: number, @Body() dto: DeepPartial<ContactEntity>) {
     return this.contactService.update(
       {
         id,

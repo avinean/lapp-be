@@ -1,11 +1,4 @@
-import { CategoryEntity } from 'src/category/category.entity';
-import {
-  Column,
-  Entity,
-  JoinTable,
-  ManyToMany,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class TelegramEntity {
@@ -23,8 +16,4 @@ export class TelegramEntity {
 
   @Column()
   link: string;
-
-  @ManyToMany(() => CategoryEntity)
-  @JoinTable()
-  categories: CategoryEntity[];
 }
