@@ -34,6 +34,9 @@ import { PageModule } from './page/page.module';
 import { PageEntity } from './page/page.entity';
 import { NavigationEntity } from './navigation/navigation.entity';
 import { NavigationModule } from './navigation/navigation.module';
+import { AppsEntity } from './apps/apps.entity';
+import { AppsModule } from './apps/apps.module';
+import { MailModule } from './mail/mail.module';
 
 @Module({
   imports: [
@@ -60,6 +63,7 @@ import { NavigationModule } from './navigation/navigation.module';
         CmsEntity,
         PageEntity,
         NavigationEntity,
+        AppsEntity,
       ],
       synchronize: true,
     }),
@@ -83,6 +87,8 @@ import { NavigationModule } from './navigation/navigation.module';
     CmsModule,
     PageModule,
     NavigationModule,
+    AppsModule,
+    MailModule,
   ],
   controllers: [AppController],
   providers: [
