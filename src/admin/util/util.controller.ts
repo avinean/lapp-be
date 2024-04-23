@@ -8,7 +8,7 @@ import { promisify } from 'util';
 import * as fs from 'fs';
 import { TelegramMessage } from './dto';
 import { UtilService } from './util.service';
-import { TelegramService } from 'src/telegram/telegram.service';
+import { TelegramService } from 'src/admin/telegram/telegram.service';
 
 const unlinkAsync = promisify(fs.unlink);
 

@@ -6,5 +6,5 @@ export class NavigationEntity {
   id: number;
 
   @Column({ type: 'json' })
-  navigation: object;
+  navigation: object[];
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { TelegramEntity } from './telegram.entity';
 import { DeepPartial, Repository } from 'typeorm';
-import { TelegramMessage } from 'src/util/dto';
+import { TelegramMessage } from 'src/admin/util/dto';
 import { HttpService } from '@nestjs/axios';
 
 @Injectable()

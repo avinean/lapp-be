@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { UtilService } from './util.service';
 import { UtilController } from './util.controller';
-import { TelegramModule } from 'src/telegram/telegram.module';
+import { TelegramModule } from 'src/admin/telegram/telegram.module';
 
 @Module({
   providers: [UtilService],

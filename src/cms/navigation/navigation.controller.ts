@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, Put } from '@nestjs/common';
 import { NavigationService } from './navigation.service';
-import { DeepPartial } from 'typeorm';
+import { DeepPartial, } from 'typeorm';
 import { NavigationEntity } from './navigation.entity';
 @Controller('navigation')
 export class NavigationController {

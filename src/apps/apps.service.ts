@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { AppsEntity } from './apps.entity';
 import { DeepPartial, FindOptionsWhere, Repository } from 'typeorm';
-import { MailService } from 'src/mail/mail.service';
+import { MailService } from 'src/core/mail/mail.service';
 
 @Injectable()
 export class AppsService {

@@ -20,9 +20,7 @@ export class NavigationService {
   }
 
   findOne() {
-    return this.navigationRepository.findOne({
-      where: {},
-    });
+    return this.navigationRepository.findOne({ where: {} });
   }
 
   create(data: DeepPartial<NavigationEntity>) {
