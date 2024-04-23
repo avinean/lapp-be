@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { ContactService } from './contact.service';
-import { Public } from 'src/decorators/public.decorator';
+import { Public } from 'src/core/decorators/public.decorator';
 import { DeepPartial, In } from 'typeorm';
 import { VisibilityStatus } from 'src/types/enums';
 import { ContactEntity } from './contact.entity';

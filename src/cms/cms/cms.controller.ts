@@ -2,7 +2,7 @@ import { Body, Controller, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { CmsService } from './cms.service';
 import { DeepPartial, In } from 'typeorm';
 import { CmsEntity } from './cms.entity';
-import { Public } from 'src/decorators/public.decorator';
+import { Public } from 'src/core/decorators/public.decorator';
 import { VisibilityStatus } from 'src/types/enums';
 
 @Controller('cms')

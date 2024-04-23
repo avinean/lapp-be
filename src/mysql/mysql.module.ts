@@ -6,7 +6,7 @@ import { TelegramEntity } from '../admin/telegram/telegram.entity';
 import { CmsEntity } from '../cms/cms/cms.entity';
 import { PageEntity } from '../cms/page/page.entity';
 import { NavigationEntity } from '../cms/navigation/navigation.entity';
-import { AppsEntity } from '../apps/apps.entity';
+import { AppsEntity } from '../custom/apps/apps.entity';
 
 @Module({
   imports: [

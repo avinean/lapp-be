@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { AuthGuard } from './guards/auth.guard';
+import { AuthGuard } from './core/guards/auth.guard';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { JwtService } from '@nestjs/jwt';
@@ -13,7 +13,7 @@ import { TelegramModule } from './admin/telegram/telegram.module';
 import { CmsModule } from './cms/cms/cms.module';
 import { PageModule } from './cms/page/page.module';
 import { NavigationModule } from './cms/navigation/navigation.module';
-import { AppsModule } from './apps/apps.module';
+import { AppsModule } from './custom/apps/apps.module';
 import { MailModule } from './core/mail/mail.module';
 import { MysqlModule } from './mysql/mysql.module';
 
